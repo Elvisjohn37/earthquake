@@ -95,7 +95,6 @@ const Map = ({ getDetails = () => null }) => {
               open={toolTipStatus[index]}
               disableFocusListener
               disableHoverListener
-              disableTouchListener
               title={
                 <ToolTipContent
                   onClick={() =>
