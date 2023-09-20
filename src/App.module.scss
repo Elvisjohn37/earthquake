@@ -1,0 +1,46 @@
+@import "./assets/scss/colors.scss";
+@import "./assets/scss/main.scss";
+$header-height: 50px;
+
+.app {
+  header {
+    height: $header-height;
+    line-height: $header-height;
+    padding: 0px $standard-space * 2;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 16%);
+    font-family: sans-serif;
+    color: #ffffff;
+    background-color: $primary;
+
+    span {
+      padding-left: $standard-space;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    padding: $standard-space * 2;
+
+    .map,
+    .details {
+      width: calc(50% - $standard-space);
+      height: calc(100vh - ($header-height + ($standard-space * 4)));
+    }
+
+    .map {
+      position: relative;
+    }
+
+    @media screen and (max-width: 768px) {
+      & {
+        flex-direction: column;
+
+        .map,
+        .details {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

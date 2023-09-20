@@ -1,0 +1,40 @@
+@import "./../assets/scss/colors.scss";
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  position: relative;
+  height: calc(100vh - 70px);
+
+  .subHeader {
+    color: $pText;
+    padding: 10px 0px;
+
+    .location,
+    .dateTime {
+      padding: 5px 0px;
+    }
+  }
+
+  .content {
+    padding: 40px 0px 20px;
+
+    & > div {
+      padding: 5px 0;
+      align-items: center;
+    }
+
+    .nearByCities {
+      display: inline-block;
+
+      .chip:first-of-type {
+        margin-left: 10px;
+      }
+
+      .chip {
+        margin: 3px;
+      }
+    }
+  }
+}
